@@ -75,13 +75,14 @@ h1 {
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .container {
     height: clamp(23rem, 50vw, 24rem);
-    width: clamp(20rem 20vw, 21rem);
+    width: 20rem;
   }
   .input-container {
     height: clamp(4rem, 50vw, 6rem);
-    width: clamp(20rem 50vw, 21rem);
+    width: 20rem;
   }
   #change-due {
+    width: 20rem;
     text-align: left;
   }
 }
