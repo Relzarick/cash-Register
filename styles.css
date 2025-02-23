@@ -74,7 +74,7 @@ h1 {
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .container {
-    height: clamp(23rem, 50vw, 24rem);
+    height: max-content;
     width: 20rem;
   }
   .input-container {
