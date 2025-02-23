@@ -5,8 +5,8 @@ body {
   text-align: center;
 }
 h1 {
-  font-size: 3rem;
-  margin-top: 5vh;
+  font-size: clamp(2rem, 10vw, 3rem);
+  margin: 5vh 0 clamp(1rem, 1vw, 2rem);
 }
 
 .price-container {
@@ -14,8 +14,8 @@ h1 {
 }
 .input-container {
   font-size: 1.5rem;
-  width: 20rem;
   height: 6rem;
+  width: 24rem;
   border: 2px solid black;
   border-radius: 3px;
   margin: auto;
@@ -36,9 +36,8 @@ h1 {
 }
 .container {
   border: 2px solid black;
-  height: 24rem;
-  width: 25rem;
-  margin: 1rem auto;
+  width: 24rem;
+  margin: 3vw auto 0;
   border-radius: 3px;
   padding-top: 1rem;
 }
@@ -65,10 +64,24 @@ h1 {
 #change-due {
   font-size: 1.5rem;
   border: 2px solid black;
-  width: 31vw;
+  width: 24rem;
   min-height: 8vh;
-  margin: auto;
+  margin: 1vw auto 0;
   display: none;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .container {
+    height: clamp(23rem, 50vw, 24rem);
+    width: clamp(20rem 20vw, 21rem);
+  }
+  .input-container {
+    height: clamp(4rem, 50vw, 6rem);
+    width: clamp(20rem 50vw, 21rem);
+  }
+  #change-due {
+    text-align: left;
+  }
 }
