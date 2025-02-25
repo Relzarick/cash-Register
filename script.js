@@ -29,11 +29,10 @@ let assignDenominations = {};
 
 const centsArray = [10000, 2000, 1000, 500, 100, 25, 10, 5, 1];
 
-const check = (test, test2) => {
-  const cashGiven = Math.round(test2 * 100);
-  //const cashGiven = Math.round(Number(userCash.value) * 100);
-  const priceInCents = Math.round(test * 100);
-  //const priceInCents = Math.round(price * 100);
+const check = () => {
+  const cashGiven = Math.round(Number(userCash.value) * 100);
+
+  const priceInCents = Math.round(price * 100);
   const changeDue = cashGiven - priceInCents;
 
   console.log(priceInCents);
@@ -278,8 +277,7 @@ let arrayOrderReversed = cidCopy
 //console.log(arrayOrderReversed);
 
 purchaseBtn.addEventListener("click", () => {
-  check(19.5, 20);
-  check(3.26, 100);
+  check();
   userCash.value = "";
 });
 
